@@ -361,7 +361,7 @@ def generate_title(desc):
     --------
     N/A
     """
-    return "@" + str(desc)
+    return "@" + desc
 
 
 def generate_q_string(sequence_length, score, mode="thresh_above"):

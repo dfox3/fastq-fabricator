@@ -15,6 +15,10 @@ class TestGenerateTitle(unittest.TestCase):
     def test_title_clean(self):
         desc = "READ67"
         self.assertEqual(fg.generate_title(desc), "@READ67")
+    def test_title_int(self):
+        desc = 938953495
+        with pytest.raises(TypeError) as pytest_wrapped_e:
+            self.assertEqual(fg.generate_title(desc), "@938953495")
 
 
 
